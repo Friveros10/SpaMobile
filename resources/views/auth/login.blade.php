@@ -2,10 +2,7 @@
 
 @section('content')
 <style>
-    .btn-color{
-        'background':'#fff',
-        'color':'#000'
-    }
+ 
 </style>
 <div class="container">
     <div class="row justify-content-center">

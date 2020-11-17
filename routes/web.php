@@ -19,6 +19,7 @@ Route::post('login','Auth\LoginController@login')->name('login');
 
 
 Route::get('/home', 'HomeController@index');
+Route::get('/getUsersAll', 'HomeController@getUsersAll');
 
 Auth::routes();
 

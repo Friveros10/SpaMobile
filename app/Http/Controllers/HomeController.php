@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -20,15 +21,17 @@ class HomeController extends Controller
         if (Auth::check()){
             if ($user->esAdmin()){
                 echo "Eres usuario administrador.";
-                return view('Admin.mainAdmin', compact('user'));
+                return view('Admin.user', compact('user'));
            } else{
                 echo "Eres usuario, NO ADMINISTRADOR.";
                 return view('User.mainUser',  compact('user'));    
             }
+        }  
     }
-        
 
-       
+    public function getUsersAll(){
+        $user = User::all();
+        return response()->json($user);
     }
 
    
