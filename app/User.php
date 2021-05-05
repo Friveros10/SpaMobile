@@ -41,6 +41,10 @@ class User extends Authenticatable
     {
       return $this->belongsTo('App\roleModel','id_role');
     }
+    public function registros()
+    {
+        return $this->belongsTo('App\registros','id_usuario');
+    }
 
     public function esAdmin()
     {
